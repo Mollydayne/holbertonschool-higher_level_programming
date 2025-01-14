@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-from string import ascii_lowercase
-result = ascii_lowercase
-print(result, end="")
+for i in range(97, 123):
+    print(f"{chr(i)}", end="")
