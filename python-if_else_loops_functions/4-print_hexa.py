@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-count = 99
-hexaValue = hex(count)
-for i in range(0, count):
-    print(i, hexaValue)
+for i in range(99):
+    print("{} = 0x{:x}".format(i, i))
