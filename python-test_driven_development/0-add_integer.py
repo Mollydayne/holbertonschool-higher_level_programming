@@ -6,13 +6,10 @@ def add_integer(a, b=98):
 
     """Purpose of this function : adding two intergers; one of them is 98"""
 
-    try:
-        return a+b
-        sum = add(a, b)
-
-    except TypeError:
-        print("a must be an integer")
-    finally:
-        return a+b
-        sum = add(a, b)
-        print(sum)
+    if not isinstance(b, (int, float)):
+        raise TypeError("b must be an integer")
+    if not isinstance(a, (int, float)):
+        raise TypeError("a must be an integer")
+    b = int(b)
+    a = int(a)
+    return a + b
