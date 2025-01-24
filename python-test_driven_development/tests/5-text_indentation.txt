@@ -1,0 +1,5 @@
+Here are the tests for task 4. Text indentation, this task is asking to create a text_indentation function,
+print a text with 2 new lines after each of these characters: ., ? and :
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
