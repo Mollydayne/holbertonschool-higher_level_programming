@@ -2,6 +2,7 @@
 
 """This file is the say_my_name function, and not the Destiny's Child song"""
 
+
 def say_my_name(first_name, last_name=""):
 
     """Printing first and last name from a given list"""
