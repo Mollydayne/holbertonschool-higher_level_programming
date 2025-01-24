@@ -9,12 +9,12 @@ def text_indentation(text):
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    result =""
+    result=""
     for char in text:
         result += char
         if char in ".?:":
             print(result.strip())
             print()
-            result =""
+            result=""
     if result:
-        print (result.strip())
+        print(result.strip())
