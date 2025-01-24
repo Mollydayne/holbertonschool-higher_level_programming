@@ -1,6 +1,10 @@
-Here are the tests for task 2. Say my name
+Here are the tests for task 3. Print square
 , this task is asking to create a print_square function,
-to add two integers.
+to print a square with #.
 
 >>> print_square = __import__('3-print_square').print_square
 
+>>> say_my_name(8, "PASTEK")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
