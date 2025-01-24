@@ -1,0 +1,20 @@
+Here are the tests for task 2. Say my name
+, this task is asking to create a say_my_name function,
+to add two integers.
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name(8, "PASTEK")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name("PASTEK", 42)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
