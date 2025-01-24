@@ -1,0 +1,6 @@
+Here are the tests for task 2. Say my name
+, this task is asking to create a print_square function,
+to add two integers.
+
+>>> print_square = __import__('3-print_square').print_square
+
