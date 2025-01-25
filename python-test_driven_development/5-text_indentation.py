@@ -5,16 +5,17 @@
 
 def text_indentation(text):
 
-    """The purpose is to print a text with two new lines after each of defined chars : . , ? and :"""
+    """The purpose is to print a text
+    with two new lines after each of defined chars"""
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    result=""
+    result = ""
     for char in text:
         result += char
         if char in ".?:":
             print(result.strip())
             print()
-            result=""
+            result = ""
     if result.strip():
         print(result.strip(), end="")
