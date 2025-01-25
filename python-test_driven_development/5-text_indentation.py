@@ -16,5 +16,5 @@ def text_indentation(text):
             print(result.strip())
             print()
             result=""
-    if result:
-        print(result.strip())
+    if result.strip():
+        print(result.strip(), end="")
