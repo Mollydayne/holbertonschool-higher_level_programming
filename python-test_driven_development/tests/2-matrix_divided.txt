@@ -1,11 +1,11 @@
 Here are the tests for task 2-matrix_divided, this task is asking to divide a matrix by a given number.
 
-    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
 
-    >>> matrix_divided(5, 2)
+ >>> matrix_divided(5, 2)
     Traceback (most recent call last):
         ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
     >>> matrix_divided([[1, 2], [3, "4"]], 2)
     Traceback (most recent call last):
