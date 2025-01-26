@@ -2,6 +2,7 @@
 
 """This file is the add_integer fonction"""
 
+
 def add_integer(a, b=98):
 
     """Purpose of this function : adding two intergers; one of them is 98"""
