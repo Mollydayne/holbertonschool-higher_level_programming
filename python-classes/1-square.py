@@ -8,5 +8,6 @@ class Square:
     """This will later print a square"""
 
     def __init__(self, size):
+        """Private attribute for size"""
         self.__size = size
     pass
