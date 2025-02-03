@@ -1,0 +1,7 @@
+Tests for print_sorted function,
+asking us Write a class MyList that inherits from list
+
+>>> print_sorted = __import__("1-my_list.py").print_sorted
+
+print_sorted(Mylist)
+[1, 4, 2, 3, 5]
