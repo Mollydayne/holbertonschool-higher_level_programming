@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+
+"""
+Tests for  BaseGeometry function,
+asking us Write a class BaseGeometry that inherits from list
+"""
+
+>>> BaseGeometry = __import__('1-my_list').BaseGeometry
+
