@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
+"""
 Tests for print_sorted function,
 asking us Write a class MyList that inherits from list
+"""
 
 >>> print_sorted = __import__("1-my_list.py").print_sorted
 
