@@ -4,10 +4,10 @@
 
 
 class BaseGeometry:
-
     """
     Basegeometry class
     """
+
     def area(self):
         """
         raising an exception
