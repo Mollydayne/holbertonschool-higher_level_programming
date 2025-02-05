@@ -22,6 +22,7 @@ class Shape(ABC):
     def perimeter(self):
         pass
 
+
 class Circle(Shape):
 
     """
@@ -37,6 +38,7 @@ class Circle(Shape):
     def perimeter(self):
         return abs((2 * self.radius) * pi)
 
+
 class Rectangle(Shape):
     """
     Rectangle!
@@ -50,6 +52,7 @@ class Rectangle(Shape):
 
     def perimeter(self):
         return self.__width + self.__height
+
 
 def shape_info(shape):
 
