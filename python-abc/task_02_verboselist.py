@@ -37,3 +37,4 @@ class VerboseList(list):
         """
         removed_item = super().pop(index)
         print("Popped [{}] from the list".format(removed_item))
+        return removed_item
