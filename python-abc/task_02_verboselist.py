@@ -22,7 +22,7 @@ class VerboseList(list):
         print a message when extend
         """
         super().extend(item)
-        print("Extended the list with [{}] items".format(item))
+        print("Extended the list with [{}] items.".format(len(item)))
 
     def remove(self, item):
         """
@@ -35,5 +35,5 @@ class VerboseList(list):
         """
         print a message when pop
         """
-        super().pop(index)
-        print("Popped [{}] from the list".format(self))
+        removed_item = super().pop(index)
+        print("Popped [{}] from the list".format(removed_item))
