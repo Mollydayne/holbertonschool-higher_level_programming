@@ -4,6 +4,7 @@
 Module for Task 2 - append to a file
 """
 
+
 def append_write(filename="", text=""):
     """
     Appends a string at the end of a text file

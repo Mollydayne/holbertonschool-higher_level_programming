@@ -4,6 +4,7 @@
 Module for Task 1 - write file
 """
 
+
 def write_file(filename="", text=""):
     """
     Writes into a file and return number of char
