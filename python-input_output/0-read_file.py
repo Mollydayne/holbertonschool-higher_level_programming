@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Task 0
+Module for Task 0 -  read file
 """
 
 
