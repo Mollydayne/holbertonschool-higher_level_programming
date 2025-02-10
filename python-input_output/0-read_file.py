@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+Task 0
+"""
+
+
 def read_file(filename=""):
     """
     Reads a file and prints its content
