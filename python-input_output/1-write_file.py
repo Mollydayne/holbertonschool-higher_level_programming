@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 
+"""
+Module for Task 1 - write file
+"""
+
 def write_file(filename="", text=""):
     """
     Writes into a file and return number of char
     """
 
-    with open("my_first_file.txt", "w") as file:
-        file.writelines("")
+    with open(filename, "w", encoding="utf-8") as file:
+        return file.write(text)
