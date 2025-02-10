@@ -4,8 +4,6 @@
 Module for task 8 : Class to Json
 """
 
-import json
-
 
 def class_to_json(obj):
     """
