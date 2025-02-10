@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
-import json
+"""
+Module for Task 4
+"""
 
-"""
-Module for Task 4 - from Json string to object
-"""
+import json
 
 
 def from_json_string(my_str):
     """
-    Returns and object represented by Json string
+    Returns an object represented by Json
     """
-    
-    
+
+    return json.loads(my_str)
