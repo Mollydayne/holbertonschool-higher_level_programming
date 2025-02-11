@@ -38,7 +38,7 @@ class CustomObject:
     @classmethod
     def deserialize(cls, filename):
         """
-        Deserializes an object from a file and returns an instance of CustomObject.
+        Deserializes an object from a file
         """
         try:
             with open(filename, "rb") as file:
