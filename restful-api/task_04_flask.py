@@ -5,10 +5,11 @@ Task 4. Develop a Simple API using Python with Flask
 
 from flask import Flask
 from flask import jsonify
+from flask import request
 
 app = Flask(__name__)
 
-username = {
+users = {
         "jane": {"name": "Jane", "age": 28, "city": "Los Angeles"},
         "Molly": {"name": "Molly", "age": 29, "city": "Lormont"},
         "Alex": {"name": "Alex", "age": 93, "city": "Ginko"}
@@ -22,7 +23,7 @@ def home():
 @app.route('/data')
 
 def getUsers():
-    return jsonify(username)
+    return jsonify(users)
 
 @app.route('/status')
 
@@ -33,15 +34,23 @@ def status():
 
 def usersFullObject(username):
     users = users.get(username)
-    if username:
-        return jsonify(username)
+    if user:
+        return jsonify(user)
     else:
         return jsonify({"error": "User not found"}), 404
 
-@app.route('/add_user')
+@app.route('/add_user', methods=['POST'])
+def add_user():
+    data = request.get_json()
 
-def status():
-    return 'OK'
+    username = data["username"]
+
+    users[username] = {
+        "name": data["name"],
+        "age": data["age"],
+        "city": data["city"]
+    }
+    return jsonify({"message": "Yeah, u added someone else !", "user": users[username]}), 201  # ✅ JSON structuré
 
 if __name__ == '__main__':
     app.run()
