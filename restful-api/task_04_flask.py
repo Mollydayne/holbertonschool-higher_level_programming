@@ -23,12 +23,12 @@ def home():
 
 @app.route('/data')
 def get_users():
-    return jsonify(users)
+    return jsonify(list(users.keys()))
 
 
 @app.route('/status')
 def status():
-    return 'OK'
+    return "OK"
 
 
 @app.route('/users/<username>')
@@ -44,7 +44,8 @@ def users_full_object(username):
 def add_user():
     data = request.get_json()
 
-    if not data or "username" not in data or "name" not in data or "age" not in data or "city" not in data:
+    if not data or "username" not in data \
+            or "name" not in data or "age" not in data or "city" not in data:
         return jsonify({"error": "Invalid data format"}), 400
 
     username = data["username"]
@@ -57,7 +58,15 @@ def add_user():
         "age": data["age"],
         "city": data["city"]
     }
-    return jsonify({"message": "Congrats, u add someone!", "user": users[username]}), 201
+    return jsonify({
+        "message": "User added",
+        "user": {
+            "username": username,
+            "name": users[username]["name"],
+            "age": users[username]["age"],
+            "city": users[username]["city"]
+        }
+    }), 201
 
 
 if __name__ == '__main__':
