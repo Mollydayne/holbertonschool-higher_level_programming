@@ -40,9 +40,8 @@ def users_full_object(username):
 def add_user():
     data = request.get_json()
 
-    if not data or "username" not in data \
-            or "name" not in data or "age" not in data or "city" not in data:
-        return jsonify({"error": "Invalid data format"}), 400
+    if not data or 'username' not in data:
+        return jsonify({"error": "Username is required"}), 400
 
     username = data["username"]
 
