@@ -9,11 +9,7 @@ from flask import request
 
 app = Flask(__name__)
 
-users = {
-    "jane": {"name": "Jane", "age": 28, "city": "Los Angeles"},
-    "Molly": {"name": "Molly", "age": 29, "city": "Lormont"},
-    "Alex": {"name": "Alex", "age": 93, "city": "Ginko"}
-}
+users = {}
 
 
 @app.route('/')
