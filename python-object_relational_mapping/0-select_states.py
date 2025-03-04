@@ -5,34 +5,32 @@ Task 0. Get all states
 
 
 import MySQLdb
-import sys #to allow access to args
+import sys
 
 if __name__ == "__main__":
     # args check
     if len(sys.argv) != 4:
-        print("Usage: ./0-select_states.py <mysql_username> <mysql_password> <database_name>")
+        print("Usage: ./0-select_states.py <mysql_username> \
+            <mysql_password> <database_name>")
         sys.exit(1)
 
     try:
         db = MySQLdb.connect(
-            host="localhost", #local
+            host="localhost",
             user=sys.argv[1],
             password=sys.argv[2],
             database=sys.argv[3]
         )
 
-        cursor = db.cursor() #needed to exct sql query
+        cursor = db.cursor()
         cursor.execute("SELECT * FROM states ORDER BY states.id ASC;")
 
-        for state in cursor.fetchall(): # loop to check all lines from what query gets
+        for state in cursor.fetchall():
             print(state)
 
         cursor.close()
         db.close()
 
-    except MySQLdb.Error as err: # in case access is nok
+    except MySQLdb.Error as err:
         print(f"Erreur MySQL : {err}")
         sys.exit(1)
-
-# Note to self : user created, molly
-# test line : python3 0-select_states.py molly molly_pwd hbtn_0e_0_usa
