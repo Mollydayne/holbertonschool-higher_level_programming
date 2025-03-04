@@ -1,0 +1,1 @@
+-- Task 10. Genre ID by show
