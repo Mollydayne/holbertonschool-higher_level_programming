@@ -9,7 +9,8 @@ import sys
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: ./2-filter_states.py <mysql_username> <mysql_password> <database_name> <state_name>")
+        print("Usage: ./2-filter_states.py <mysql_username> <mysql_password> \
+            <database_name> <state_name>")
         sys.exit(1)
 
     try:
