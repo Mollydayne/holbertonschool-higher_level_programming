@@ -8,7 +8,6 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    # args check
     if len(sys.argv) != 4:
         print("Usage: ./0-select_states.py <mysql_username> \
             <mysql_password> <database_name>")
