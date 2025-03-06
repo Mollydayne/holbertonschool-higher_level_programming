@@ -7,7 +7,7 @@ from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import sys
-from sqlalchemy import or_
+from model_city import City
 
 
 if __name__ == "__main__":
