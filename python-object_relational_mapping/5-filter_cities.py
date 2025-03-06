@@ -21,13 +21,9 @@ if __name__ == "__main__":
                WHERE states.name = %s
                ORDER BY cities.id ASC;""", (sys.argv[4], ))
 
-city_names = []
-row = cursor.fetchone()
-while row:
-    city_names.append(row[0])
-    row = cursor.fetchone()
 
-print(", ".join(city_names))
+
+    print(", ".join([row[0] for row in cursor.fetchall()]))
 
 
 cursor.close()
