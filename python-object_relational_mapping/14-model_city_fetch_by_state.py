@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Task 13. Delete states
+Task 14. Cities in state
 """
 
 from model_state import Base, State
@@ -22,9 +22,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.name.contains("a")).all()
-    for state in states:
-        session.delete(state)
-    session.commit()
-    session.refresh(state)
+    rows = session.query(City, State).join(State).order_by(City.id).all()
+    for city, state in rows:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()

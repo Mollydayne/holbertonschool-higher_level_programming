@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Task 9. Contains `a`
+Task 11. Add a new state
 """
 
 from model_state import Base, State
