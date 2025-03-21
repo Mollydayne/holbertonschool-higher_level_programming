@@ -3,16 +3,33 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
 @app.route('/items')
 def items():
-    # Get Json file
-    with open('items.json', 'r') as file:
-        data = json.load(file)
+    try:
+        with open('items.json', 'r') as f:
+            data = json.load(f)
+            item_data = data.get("items")
+    except FileNotFoundError:
+        data = []
 
-    items_list = data.get("items", [])
+    return render_template('items.html', items=item_data)
 
-    # Template rendering
-    return render_template('items.html', items=items_list)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
